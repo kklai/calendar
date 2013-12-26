@@ -1,4 +1,4 @@
 calendar
 ========
 
-Design a good calendar UI
+Calendar UI
