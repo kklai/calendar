@@ -5,8 +5,14 @@ body {
 
 table.calendar-table {
   overflow: hidden;
-  margin-left: 15%;
-  border-spacing: 20px;
+  margin-left: 20%;
+}
+
+table.calendar-table tbody tr:first-child th {
+  text-align: left;
+  padding: 0 0 20px 0;
+  font-weight: lighter;
+  font-size: 20px;
 }
 
 .calendar-day > p {
@@ -14,7 +20,8 @@ table.calendar-table {
   border-radius: 80%;
   color: #fff;
   text-align: center;
-  padding: 8px;
+  padding: 4px;
+  margin: 8px 0 0 8px;
   font-size: 13px;
 }
 
@@ -22,10 +29,8 @@ table.calendar-table {
   background-color: #fff;
 }
 
-.cal-box {
-	border: 1px solid #ececec;
-	width: 100px;
-	height: 100px;
-	float: left;
-	padding: 0 0 0 8px;
+td.calendar-day {
+	border-top: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+	padding: 0 60px 60px 0;
 }
