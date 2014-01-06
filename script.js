@@ -76,14 +76,24 @@ function drawCalendar() {
   $('.calendar').html(cal.getHTML());
 }
 
+var gcalEvents;
 function getCalendar() {
 	$.getJSON("http://www.google.com/calendar/feeds/s6bvn4u675jmcefa3q4337qajc@group.calendar.google.com/public/full?alt=json-in-script&max-results=25&singleevents=false&sortorder=ascending&orderby=starttime&callback=?",    
   function(json){
     console.log(json);
+    gcalEvents = json;
 	})
+}
+
+function addEvents() {
+	$('table.calendar-table tbody tr:first-child th').prepend(gcalEvents.feed.title.$t + ' &#8226; ');
 }
 
 $(document).ready(function(){
 	drawCalendar();
 	getCalendar();
 });
+
+$(window).load(function(){
+	addEvents();
+})

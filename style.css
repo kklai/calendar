@@ -9,7 +9,6 @@ table.calendar-table {
 }
 
 table.calendar-table tbody tr:first-child th {
-  text-align: left;
   padding: 0 0 20px 0;
   font-weight: lighter;
   font-size: 20px;
