@@ -14,7 +14,7 @@ table.calendar-table tbody tr:first-child th {
   font-size: 20px;
 }
 
-.calendar-day > p {
+.calendar-day > p:first-child {
   background-color: #e76868;
   border-radius: 80%;
   color: #fff;
@@ -22,6 +22,7 @@ table.calendar-table tbody tr:first-child th {
   padding: 4px;
   margin: 8px 0 0 8px;
   font-size: 13px;
+  width: 15px;
 }
 
 .calendar-day > p:empty {

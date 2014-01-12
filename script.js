@@ -92,8 +92,11 @@ function addEvents() {
   caldays = $('.calendar-day');
   for (i = 0; i < gcalEvents.feed.entry.length; i ++) {
     eventday = gcalEvents.feed.entry[i].gd$when[0].startTime.slice(-2);
+    if (eventday[0] == 0) {
+      eventday = eventday[1]
+    }
     console.log(eventday);
-    $('#' + eventday).append('<li>' + gcalEvents.feed.entry[i].title.$t + '</li>');
+    $('#' + eventday).append('<p>' + gcalEvents.feed.entry[i].title.$t + '</p>');
   }
 }
 
