@@ -47,7 +47,7 @@ Calendar.prototype.generateHTML = function(){
   for (var i = 0; i < 9; i++) {
     // this loop is for weekdays (cells)
     for (var j = 0; j <= 6; j++) { 
-      html += '<td class="calendar-day"><p>';
+      html += '<td class="calendar-day" id="' + day +'"><p>';
       if (day <= monthLength && (i > 0 || j >= startingDay)) {
         html += day;
         day++;
@@ -85,10 +85,15 @@ function getCalendar() {
 	})
 }
 
+var caldays;
+var eventday;
 function addEvents() {
 	$('table.calendar-table tbody tr:first-child th').prepend(gcalEvents.feed.title.$t + ' &#8226; ');
+  caldays = $('.calendar-day');
   for (i = 0; i < gcalEvents.feed.entry.length; i ++) {
-    $('.events').append('<li>' + gcalEvents.feed.entry[i].title.$t + '</li>');
+    eventday = gcalEvents.feed.entry[i].gd$when[0].startTime.slice(-2);
+    console.log(eventday);
+    $('#' + eventday).append('<li>' + gcalEvents.feed.entry[i].title.$t + '</li>');
   }
 }
 
