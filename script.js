@@ -87,6 +87,9 @@ function getCalendar() {
 
 function addEvents() {
 	$('table.calendar-table tbody tr:first-child th').prepend(gcalEvents.feed.title.$t + ' &#8226; ');
+  for (i = 0; i < gcalEvents.feed.entry.length; i ++) {
+    $('.events').append('<li>' + gcalEvents.feed.entry[i].title.$t + '</li>');
+  }
 }
 
 $(document).ready(function(){
