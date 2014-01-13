@@ -3,9 +3,17 @@ body {
   font-size: 15px;
 }
 
+.calendar, .events {
+  float: left;
+}
+
+.events {
+  margin-left: 50px;
+}
+
 table.calendar-table {
   overflow: hidden;
-  margin-left: 20%;
+ /* margin-left: 20%;*/
 }
 
 table.calendar-table tbody tr:first-child th {
@@ -32,5 +40,7 @@ table.calendar-table tbody tr:first-child th {
 td.calendar-day {
 	border-top: 1px solid #ececec;
   border-right: 1px solid #ececec;
-	padding: 0 60px 60px 0;
+	padding: 0 30px 30px 0;
+  max-width: 40px;
+  height: 40px;
 }

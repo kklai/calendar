@@ -97,6 +97,7 @@ function addEvents() {
     }
     console.log(eventday);
     $('#' + eventday).append('<p>' + gcalEvents.feed.entry[i].title.$t + '</p>');
+    $('.events').append('<p>' + gcalEvents.feed.entry[i].title.$t + '</p>');
   }
 }
 
