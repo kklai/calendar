@@ -96,7 +96,7 @@ function addEvents() {
       eventday = eventday[1]
     }
     console.log(eventday);
-    $('#' + eventday).append('<p>' + gcalEvents.feed.entry[i].title.$t + '</p>');
+    $('#' + eventday).append('<p class="cal-events">' + gcalEvents.feed.entry[i].title.$t + '</p>');
     $('.events').append('<p>' + gcalEvents.feed.entry[i].title.$t + '</p>');
   }
 }
